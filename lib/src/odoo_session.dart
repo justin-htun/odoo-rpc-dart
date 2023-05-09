@@ -61,7 +61,7 @@ class OdooSession {
     return OdooSession(
       id: info['id'] as String? ?? '',
       userId: info['uid'] as int,
-      partnerId: info['partner_id'] as int,
+      // partnerId: info['partner_id'] as int,
       companyId: info['company_id'] as int,
       userLogin: info['username'] as String,
       userName: info['name'] as String,
