@@ -67,8 +67,8 @@ class OdooSession {
       userName: info['name'] ?? '',
       userLang: ctx['lang'] as String,
       userTz: ctx['tz'] is String ? ctx['tz'] as String : 'UTC',
-      isSystem: info['is_system'] as bool,
-      dbName: info['db'] as String,
+      isSystem: info['is_system'] ?? false,
+      dbName: info['db'] ?? '',
       serverVersion: versionInfo[0].toString(),
     );
   }
