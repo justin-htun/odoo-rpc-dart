@@ -61,10 +61,10 @@ class OdooSession {
     return OdooSession(
       id: info['id'] as String? ?? '',
       userId: info['uid'] as int,
-      // partnerId: info['partner_id'] as int,
+      partnerId: info['partner_id'] ?? -1,
       companyId: info['company_id'] as int,
       userLogin: info['username'] as String,
-      userName: info['name'] as String,
+      userName: info['name'] ?? '',
       userLang: ctx['lang'] as String,
       userTz: ctx['tz'] is String ? ctx['tz'] as String : 'UTC',
       isSystem: info['is_system'] as bool,
